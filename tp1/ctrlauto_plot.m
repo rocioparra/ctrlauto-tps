@@ -45,5 +45,17 @@ elseif ej=='h'
     for i=2:4
     s.AxesProperties(i).LegendLocation = 'southeast';
     end
+elseif ej=='n' 
+     vars = {'u', 'y', 'ydot', 'i'};
+    s = stackedplot(tbl, vars, 'GridVisible', 'on', 'Marker', '.');
+    s.DisplayLabels = {'Entrada', 'Posición', 'Velocidad', 'Corriente'};
+  
+    s.XLimits = seconds([3, 6]);
+    
+elseif ej=='o' 
+    vars = {'u', 'y', 'ydot', 'i'};
+    s = stackedplot(tbl, vars, 'GridVisible', 'on', 'Marker', '.');
+    s.DisplayLabels = {'Entrada', 'Posición', 'Velocidad', 'Corriente'};
+end
 end
 
